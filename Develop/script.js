@@ -14,16 +14,15 @@ function generatePassword() {
       passwordLength = parseInt(prompt('Invalid input! Please enter a number between 8 and 128.'));
     }
     
-    // Prompt the user for which character types to include in the password
     const includeLowercase = confirm('Do you want to include lowercase letters?');
     const includeUppercase = confirm('Do you want to include uppercase letters?');
     const includeNumeric = confirm('Do you want to include numbers?');
     const includeSpecial = confirm('Do you want to include special characters?');
     
-    // Define an empty array to store all possible characters based on the user input
+  
     let possibleChars = [];
     
-    // Add characters from selected categories to the possible characters array
+    
     if (includeLowercase) {
       possibleChars = possibleChars.concat(lowercaseChars);
     }
@@ -37,17 +36,15 @@ function generatePassword() {
       possibleChars = possibleChars.concat(specialChars);
     }
     
-    // Generate the password by randomly selecting characters from the possible characters array
-    let password = '';
-    for (let i = 0; i < passwordLength; i++) {
-      password += possibleChars[Math.floor(Math.random() * possibleChars.length)];
+    
+    var password = '';
+    for (var i = 0; i < passwordLength; i++) {
+      password += charSet.charAt(Math.floor(Math.random() * charSet.length));
     }
     
-    // Return the generated password
     return password;
   }
   
-  // Call the function to generate a password and display it in an alert
   alert('Your new password is: ' + generatePassword());
 
   // Get references to the #generate element
