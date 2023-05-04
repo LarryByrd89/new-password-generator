@@ -7,10 +7,13 @@ function generatePassword() {
     var numbersChar = "1234567890";
     var specialChar = "!@#$%^&*()-_+={}[],.?/:;\|"
   
-    var passwordLength = 
-  //lowercase, uppercase, numbers, special characters
-  //validate the input
-  //display generated password on page
+    var passwordLength = passwordLength < 8 || passwordLength > 128 
+
+    var useUppercase = confirm("Do you wan to include uppercase characters?");
+    var useLowercase = confirm("Do you want to include lowercase characters?");
+    var useNumbers = confirm("Do you want to include numeric characters?");
+    var useSpecial = confirm("Do you want to include special characters?");
+  
 return "Password Generated";
 }
 
