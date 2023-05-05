@@ -4,7 +4,7 @@
 # RANDOM PASSWORD GENERATOR 
 
 
-- This is a Random Password Generator where you can generate your customized passwords randomly with different constraints as uppercase, lowercase, length, numbers, special characters and copy the generated password.
+- This Random Password Generator will be able to generate your customized passwords randomly with different characters such as uppercase, lowercase, length, numbers, special characters for optimal security confidence.
 
 
 ##  Features :
