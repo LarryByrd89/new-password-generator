@@ -1,16 +1,6 @@
 // Assignment code here
-function randomListCharacter(list) {
-  return list[randomInteger(list.length)];
-}
-
-function randomInteger(min, max) {
-  if (!max) {
-    max = min;
-    min = 0;
-
-  }
-
-}
+function generatePassword() {
+  console.log("Generate Password button clicked")
 
     var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
@@ -54,7 +44,7 @@ function randomInteger(min, max) {
         generatePassword += randomCharacter;
     }
     return password;
-  
+  }
   
   alert('Your new password is: ' + generatePassword());
 
