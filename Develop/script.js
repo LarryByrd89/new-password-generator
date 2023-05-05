@@ -9,7 +9,7 @@ function generatePassword() {
 
     let passwordLength = parseInt(prompt('How many characters do you want in your password? (Enter a number between 8 and 128)'));
   
-    // Validate the user input for password length
+    
     while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
       passwordLength = parseInt(prompt('Invalid input! Please enter a number between 8 and 128.'));
     }
@@ -18,9 +18,6 @@ function generatePassword() {
     const includeUppercase = confirm('Do you want to include uppercase letters?');
     const includeNumeric = confirm('Do you want to include numbers?');
     const includeSpecial = confirm('Do you want to include special characters?');
-    
-  
-    let possibleChars = [];
     
     
     if (includeLowercase) {
@@ -39,7 +36,7 @@ function generatePassword() {
     
     var password = '';
     for (var i = 0; i < passwordLength; i++) {
-      password += charSet.charAt(Math.floor(Math.random() * charSet.length));
+      password += charSet.charAt(Math.random() * charSet.length));
     }
     
     return password;
