@@ -1,6 +1,16 @@
 // Assignment code here
-function generatePassword() {
-  console.log("Generate Password button clicked")
+function randomListCharacter(list) {
+  return list[randomInteger(list.length)];
+}
+
+function randomInteger(min, max) {
+  if (!max) {
+    max = min;
+    min = 0;
+
+  }
+
+}
 
     var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
@@ -10,9 +20,7 @@ function generatePassword() {
     let passwordLength = parseInt(prompt('How many characters do you want in your password? (Enter a number between 8 and 128)'));
   
     
-    while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
-      passwordLength = parseInt(prompt('Invalid input! Please enter a number between 8 and 128.'));
-    }
+   
     
     const includeLowercase = confirm('Do you want to include lowercase letters?');
     const includeUppercase = confirm('Do you want to include uppercase letters?');
@@ -36,11 +44,17 @@ function generatePassword() {
     
     var password = '';
     for (var i = 0; i < passwordLength; i++) {
-      password += charSet.charAt(Math.random() * charSet.length));
+      var index = Math.floor(Math.random() * options.length);
+    var computerChoice = options[index];
     }
     
+    for (let x = 0; x < passwordLength; x++) {
+        let randomList = randomListCharacter(userChoices);
+        let randomCharacter = randomListCharacter (randomList);
+        generatePassword += randomCharacter;
+    }
     return password;
-  }
+  
   
   alert('Your new password is: ' + generatePassword());
 
