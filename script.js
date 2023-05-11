@@ -7,7 +7,10 @@ function generatePassword() {
     var numbersChar = "1234567890".split("")
     var specialChar = "!@#$%^&*()-_+={}[],.?/:;\|".split("")
 
-    let passwordLength = parseInt(prompt('How many characters do you want in your password? (Enter a number between 8 and 128)'));
+    let passwordLength;
+do {
+  passwordLength = parseInt(prompt('How many characters do you want in your password? (Enter a number between 8 and 128)'));
+} while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128);
   
     
     const includeLowercase = confirm('Do you want to include lowercase letters?');
